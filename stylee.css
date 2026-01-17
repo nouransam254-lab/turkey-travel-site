@@ -835,3 +835,18 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+
+/* كود تظبيط الموبايل */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem !important; /* تصغير العنوان الكبير */
+    }
+    .hero-content {
+        padding: 20px;
+    }
+    img {
+        width: 100%; /* عشان الصورة متخرجش بره الشاشة */
+        height: auto;
+    }
+}
