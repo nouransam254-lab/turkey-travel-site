@@ -792,49 +792,33 @@ footer {
 }
 
 
-/* كود واحد شامل لكل الموبايلات */
 @media (max-width: 768px) {
-    /* 1. تظبيط القائمة - Navbar */
+    /* تجعل الصفحة تملأ الشاشة بالعرض */
+    * {
+        max-width: 100vw; 
+    }
+
     nav {
-        flex-direction: column !important;
-        gap: 15px !important;
-        padding: 15px !important;
+        flex-direction: row !important; 
+        justify-content: center !important;
+        flex-wrap: wrap;
     }
 
-    /* 2. تصغير العناوين عشان متفرشش بره الشاشة */
-    h1 {
-        font-size: 1.6rem !important;
-    }
-    
-    h2 {
-        font-size: 1.4rem !important;
+    /* يخلي الصورة والاسم يظهروا بشكل طبيعي */
+    .about-section {
+        padding: 20px !important;
+        text-align: center;
     }
 
-    /* 3. تظبيط الهيرو والزراير */
-    .hero {
-        padding: 40px 10px !important;
-    }
-
-    .btn-book, .open-modal-btn {
-        width: 90% !important;
-        margin: 10px auto !important;
-    }
-
-    /* 4. تظبيط العناصر عشان تظهر تحت بعضها */
-    .features, .contact-container, .gallery-grid {
-        display: block !important;
-    }
-
-    .features-item, .contact-info {
-        width: 100% !important;
-        margin-bottom: 20px;
-    }
-
-    /* 5. أهم سطر للصور */
     img {
-        max-width: 100% !important;
-        height: auto !important;
+        width: 90% !important; /* الصورة تاخد عرض الشاشة تقريباً */
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
     }
 }
+
+
 
 
