@@ -28,6 +28,10 @@ nav {
     height: 50px;
     z-index: 1000; /* عشان تكون فوق كل حاجة */
 }
+body{
+    padding-top:70;
+    overflow-x:hidden;
+}
 
 /* تنسيق اللوجو */
 .logo img {
@@ -818,6 +822,7 @@ footer {
         margin: 10px auto;
     }
 }
+
 
 
 
