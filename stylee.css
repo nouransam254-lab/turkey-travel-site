@@ -792,61 +792,49 @@ footer {
 }
 
 
-
-/* --- كود ضبط الموبايل --- */
+/* كود واحد شامل لكل الموبايلات */
 @media (max-width: 768px) {
-    /* 1. ضبط قسم الهوم (Hero Section) */
-    .hero {
-        padding: 60px 20px; /* تقليل المسافات */
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 2rem; /* تصغير العنوان عشان ميتكسرش */
-    }
-
-    /* 2. ضبط الأزرار (Buttons) */
-    .btn-book, .open-modal-btn {
-        width: 100%; /* الزرار ياخد عرض الشاشة في الموبايل لسهولة الضغط */
-        max-width: 300px;
-        margin: 10px auto;
-    }
-
-    /* 3. ضبط القائمة (Navbar) لو عندك */
+    /* 1. تظبيط القائمة - Navbar */
     nav {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 15px !important;
     }
 
-    /* 4. ضبط النافذة (Modal) عشان تظهر صح في نص شاشة الموبايل */
-    .modal-content {
-        width: 90%; 
-        margin: 30% auto;
-        padding: 20px;
-    }
-
-    /* 5. أي شبكة (Grid) أو صف (Flex) خليهم فوق بعض */
-    .features, .contact-container {
-        display: block !important;
+    /* 2. تصغير العناوين عشان متفرشش بره الشاشة */
+    h1 {
+        font-size: 1.6rem !important;
     }
     
+    h2 {
+        font-size: 1.4rem !important;
+    }
+
+    /* 3. تظبيط الهيرو والزراير */
+    .hero {
+        padding: 40px 10px !important;
+    }
+
+    .btn-book, .open-modal-btn {
+        width: 90% !important;
+        margin: 10px auto !important;
+    }
+
+    /* 4. تظبيط العناصر عشان تظهر تحت بعضها */
+    .features, .contact-container, .gallery-grid {
+        display: block !important;
+    }
+
     .features-item, .contact-info {
         width: 100% !important;
         margin-bottom: 20px;
     }
-}
 
-
-/* كود تظبيط الموبايل */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.8rem !important; /* تصغير العنوان الكبير */
-    }
-    .hero-content {
-        padding: 20px;
-    }
+    /* 5. أهم سطر للصور */
     img {
-        width: 100%; /* عشان الصورة متخرجش بره الشاشة */
-        height: auto;
+        max-width: 100% !important;
+        height: auto !important;
     }
 }
+
+
