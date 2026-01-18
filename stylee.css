@@ -696,6 +696,27 @@ h1 span.red{
     background-color: #c0392b;
     transform: translateY(-2px);
 }
+footer {
+    background-color: #222; /* لون غامق شيك */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    margin-top: 50px; /* يسيب مسافة بينه وبين جزء الحجز */
+    clear: both; /* يمنع أي تداخل مع الأجزاء اللي فوقه */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* عشان يظهر بشكل كويس على الموبايل */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 10px;
+    }
+}
 
 
 
@@ -749,4 +770,5 @@ h1 span.red{
         padding: 5px !important;
     }
 }
+
 
