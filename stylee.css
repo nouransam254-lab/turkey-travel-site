@@ -697,133 +697,56 @@ h1 span.red{
     transform: translateY(-2px);
 }
 
-/* للموبايل */
+
+
+
+
+
+
+/* كود الإنقاذ للموبايل */
 @media (max-width: 768px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 50px;
-}
-
-.social-links {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #bbb;
-}
-
-
-
-
-/* تصميم النافذة الكبيرة */
-.modal {
-    display: none; /* مخفية في البداية */
-    position: fixed;
-    z-index: 10000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-}
-
-/* الصندوق الأبيض */
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 30px;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 400px;
-    position: relative;
-    text-align: center;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-}
-
-/* زرار الإغلاق (X) */
-.close-btn {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 28px;
-    cursor: pointer;
-    color: #666;
-}
-
-/* تنسيق الخانات */
-.input-field {
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-.input-field label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
-
-.input-field input, .input-field select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
-
-/* زرار التأكيد */
-.submit-btn {
-    width: 100%;
-    background-color: #ff4d4d;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #e60000;
-}
-
-
-@media (max-width: 768px) {
-    /* تجعل الصفحة تملأ الشاشة بالعرض */
-    * {
-        max-width: 100vw; 
+    /* 1. يخلي الصفحة تفرش بكامل عرض الموبايل */
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    nav {
-        flex-direction: row !important; 
-        justify-content: center !important;
-        flex-wrap: wrap;
-    }
-
-    /* يخلي الصورة والاسم يظهروا بشكل طبيعي */
-    .about-section {
+    /* 2. تظبيط الأقسام (About & Culture) عشان متظهرش بالطول */
+    .about-section, .culture-section, .container, .content {
+        display: block !important; /* يلغي أي تقسيمات قديمة ويخليها تحت بعض */
+        width: 100% !important;
         padding: 20px !important;
-        text-align: center;
+        box-sizing: border-box !important;
     }
 
+    /* 3. الصور: نكبرها بدل ما هي قزمة */
     img {
-        width: 90% !important; /* الصورة تاخد عرض الشاشة تقريباً */
-        max-width: 400px;
-        height: auto;
+        width: 100% !important; 
+        max-width: 500px !important; /* تفرش بالعرض */
+        height: auto !important;
         display: block;
-        margin: 10px auto;
+        margin: 0 auto 20px auto; /* تتوسط وتعمل مسافة تحتها */
+    }
+
+    /* 4. الـ Navbar: نثبته ونرتب عناصره */
+    nav {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: auto !important; /* يسيب العناصر ترتب نفسها */
+        flex-direction: row !important; /* يخلي اللوجو واللينكات جنب بعض */
+        flex-wrap: wrap; /* لو مفيش مكان ينزل سطر جديد */
+        justify-content: space-around !important;
+        padding: 10px 0 !important;
+        background: #000 !important;
+    }
+
+    nav a {
+        font-size: 12px !important; /* نصغر الخط شوية عشان يكفي */
+        padding: 5px !important;
     }
 }
-
-
-
-
 
